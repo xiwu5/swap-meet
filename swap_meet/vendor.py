@@ -27,10 +27,11 @@ class Vendor:
     
     def add(self, new_item):
         self.inventory.append(new_item)
-        print(self.inventory)
         return new_item
     
     def remove(self, new_item):
-        self.inventory.remove(new_item)
-        print(self.inventory)
-        return new_item
+        if new_item in self.inventory:
+            self.inventory.remove(new_item)
+            return new_item
+        else: 
+            return False
