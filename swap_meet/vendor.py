@@ -29,3 +29,8 @@ class Vendor:
         self.inventory.append(new_item)
         print(self.inventory)
         return new_item
+    
+    def remove(self, new_item):
+        self.inventory.remove(new_item)
+        print(self.inventory)
+        return new_item
