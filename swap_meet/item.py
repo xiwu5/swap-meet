@@ -1,2 +1,5 @@
+import uuid
+
 class Item:
-    pass
+    def __init__(self, id=0):
+        self.id = int(uuid.uuid4())
