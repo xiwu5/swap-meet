@@ -77,7 +77,7 @@ def test_electronics_has_expected_category_and_custom_id():
     electronics = Electronics(id=TEST_CUSTOM_ID)
     check_category_and_custom_id(electronics, TEST_CUSTOM_ID, "Electronics")
 
-@pytest.mark.skip
+# @pytest.mark.skip
 def test_electronics_has_expected_default_to_str():
     electronics = Electronics(id=TEST_CUSTOM_ID)
     expected_str = (
