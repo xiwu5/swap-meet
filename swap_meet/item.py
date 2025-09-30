@@ -1,5 +1,6 @@
 import uuid
 
 class Item:
-    def __init__(self, id=0):
-        self.id = int(uuid.uuid4())
+    def __init__(self, id=None):
+        self.id = int(uuid.uuid4()) if id is None else id
+

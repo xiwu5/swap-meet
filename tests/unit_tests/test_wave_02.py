@@ -14,7 +14,7 @@ def test_item_instances_have_different_default_ids():
     item_b = Item()
     assert item_a.id != item_b.id
 
-@pytest.mark.skip
+# @pytest.mark.skip
 def test_items_use_custom_id_if_passed():
     item = Item(id=12345)
     assert isinstance(item.id, int)
