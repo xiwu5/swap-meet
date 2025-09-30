@@ -1,10 +1,10 @@
 import uuid
 
 class Electronics:
-    def __init__(self, id=None, type="Unknown", condition=None):
+    def __init__(self, id=None, type="Unknown"):
         self.id = int(uuid.uuid4()) if id is None else id
         self.type = type if type is "Unknown" else type
-        self.condition = 0.0 if condition is None else condition
+        # self.condition = 0.0 if condition is None else condition
 
         
     def get_category(self):
