@@ -36,7 +36,7 @@ def test_get_no_matching_items_by_category():
     assert item_a not in items
     assert len(items) == 0
 
-@pytest.mark.skip
+# @pytest.mark.skip
 def test_best_by_category():
     item_a = Clothing(condition=2.0)
     item_b = Decor(condition=2.0)
