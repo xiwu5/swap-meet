@@ -12,8 +12,7 @@ class Vendor:
         if new_item in self.inventory:
             self.inventory.remove(new_item)
             return new_item
-        else: 
-            return False
+        return False
     
     def get_by_id (self, id):
         for item in self.inventory:
