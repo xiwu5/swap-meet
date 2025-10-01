@@ -23,10 +23,10 @@ class Vendor:
         if my_item  not in self.inventory or their_item not in other_vendor.inventory:
             return False
         
-        self.inventory.remove(my_item)
-        other_vendor.inventory.append(my_item)
-        other_vendor.inventory.remove(their_item)
-        self.inventory.append(their_item)
+        self.remove(my_item)
+        other_vendor.add(my_item)
+        other_vendor.remove(their_item)
+        self.add(their_item)
 
         return True
     
@@ -35,10 +35,10 @@ class Vendor:
             return False 
         
         my_first_item = self.inventory[0]
-        other_vendor.inventory.append(my_first_item)
-        self.inventory.remove(my_first_item)
-        self.inventory.append(other_vendor.inventory[0])
-        other_vendor.inventory.remove(other_vendor.inventory[0])
+        other_vendor.add(my_first_item)
+        self.remove(my_first_item)
+        self.add(other_vendor.inventory[0])
+        other_vendor.remove(other_vendor.inventory[0])
 
         return True
     
