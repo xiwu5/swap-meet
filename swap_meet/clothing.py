@@ -4,7 +4,6 @@ class Clothing(Item):
     def __init__(self, id=None, condition=0, fabric="Unknown"):
         super().__init__(id, condition)
         self.fabric = fabric if fabric is "Unknown" else fabric
-        # self.condition = 0.0 if condition is None else condition
 
     def get_category(self):
         return "Clothing"
