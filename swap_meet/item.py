@@ -12,4 +12,15 @@ class Item:
         return f"An object of type {self.get_category()} with id {self.id}."
     
     def condition_description(self):
-        pass
+        if self.condition == 5:
+            return "Mint"
+        elif self.condition == 4:
+            return "Slightly used"
+        elif self.condition == 3:
+            return "Good"
+        elif self.condition == 2:
+            return "Heavily used"
+        elif self.condition == 1:
+            return "You probably want a glove for this one..."
+        else:
+            return "Broken"
