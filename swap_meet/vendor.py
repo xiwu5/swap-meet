@@ -59,4 +59,5 @@ class Vendor:
         for item in matched_category:
             if item.condition > highest_condition:
                 highest_condition = item.condition
-            return item
+                best_item = item
+        return best_item
